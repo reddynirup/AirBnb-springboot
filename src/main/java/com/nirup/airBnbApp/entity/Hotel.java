@@ -1,7 +1,6 @@
 package com.nirup.airBnbApp.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*; // to import Table, Id, GeneratedValue, GenerationType, Entity, Column, Embedded, ManyToOne, OneToMany
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -43,11 +42,10 @@ public class Hotel {
     @Column(nullable = false)
     private Boolean active;
 
-//    @ManyToOne(optional = false)
-//    private User owner;
-//
-//    @OneToMany(mappedBy = "hotel")
-//    @JsonIgnore
-//    private List<Room> rooms;
+    @ManyToOne
+    private User owner;
+
+    @OneToMany(mappedBy = "hotel")
+    private List<Room> rooms;
 
 }
