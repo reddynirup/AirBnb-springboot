@@ -1,7 +1,7 @@
 package com.nirup.airBnbApp.controller;
 
-import com.codingshuttle.projects.airBnbApp.dto.RoomDto;
-import com.codingshuttle.projects.airBnbApp.service.RoomService;
+import com.nirup.airBnbApp.dto.RoomDto;
+import com.nirup.airBnbApp.service.RoomService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
