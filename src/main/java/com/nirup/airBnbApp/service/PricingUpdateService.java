@@ -7,6 +7,7 @@ import com.nirup.airBnbApp.repository.HotelMinPriceRepository;
 import com.nirup.airBnbApp.repository.HotelRepository;
 import com.nirup.airBnbApp.repository.InventoryRepository;
 import com.nirup.airBnbApp.strategy.PricingService;
+import com.nirup.airBnbApp.strategy.PricingStrategy;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -36,7 +37,7 @@ public class PricingUpdateService {
     private final HotelMinPriceRepository hotelMinPriceRepository;
     private final PricingService pricingService;
 
-//    @Scheduled(cron = "*/5 * * * * *")
+    //    @Scheduled(cron = "*/5 * * * * *")
     @Scheduled(cron = "0 0 * * * *")
     public void updatePrices() {
         int page = 0;
